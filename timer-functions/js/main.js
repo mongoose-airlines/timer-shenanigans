@@ -3,7 +3,7 @@ const winBtn = document.getElementById('winButton');
 const winMsg = document.getElementById('message');
 const resetBtn = document.getElementById('resetButton');
 
-let timerInterval;
+let timerIntervalId;
 let min, sec, seconds = 0;
 let winTime = 0;
 
@@ -23,11 +23,11 @@ resetBtn.addEventListener('click', ()=> {
 startTimer();
 
 function startTimer() {
-    if (timerInterval) {
+    if (timerIntervalId) {
         seconds = 0;
-        clearInterval(timerInterval);
+        clearInterval(timerIntervalId);
     }
-    timerInterval = setInterval(tick, 1000);
+    timerIntervalId = setInterval(tick, 1000);
 }
 
 function tick() {
