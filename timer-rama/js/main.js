@@ -13,6 +13,7 @@ startBtn.addEventListener('click', ()=> {
   if (timerIntervalId) {
     clearInterval(timerIntervalId)
     timerIntervalId = null
+    return
   }
   startTimer();
 })

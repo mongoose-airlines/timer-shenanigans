@@ -8,7 +8,6 @@ let min, sec, seconds = 0;
 let winTime = 0;
 
 winBtn.addEventListener('click', () => {
-	winTime = seconds;
 	winBtn.className = "animate__animated animate__bounce";
 	if (min < 1) { winMsg.innerText = `YAAAAY, you won in ${sec} seconds!`; }
 	else if (min < 2) {winMsg.innerText = `YAAAAY, you won in ${min} minute and ${sec} seconds!`}
